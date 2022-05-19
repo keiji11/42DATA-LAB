@@ -1,5 +1,7 @@
 """
-Convert all in seconds
+Write a program that lets the user insert a number of
+hours, minutes and seconds and prints the total number of
+seconds.
 """
 import sys
 

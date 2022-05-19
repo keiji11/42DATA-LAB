@@ -1,3 +1,20 @@
+"""
+Create a script named var_to_dict.py in which you will
+copy the following list of d couples as is in one of your
+functions: (see d list below).
+
+Your script must turn this variable into a dictionary.
+The year will be the key, the name of the musician the
+value. It must then display this dictionary on the
+standard output following a clear format:
+
+1970 : Frusciante
+1954 : Vaughan
+1948 : Ramone
+1944 : Page Beck
+1911 : Johnson
+"""
+
 d = [
 ('Hendrix' , '1942'),
 ('Allman' , '1946'),

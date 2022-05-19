@@ -1,3 +1,13 @@
+"""
+Integrate the following dictionary in your code. Then
+write a program that displays the names of the musicians
+sorted by year in ascending order, then in alphabetic
+order for similar years. One per line, without showing
+the year.
+
+(d dict down below)
+"""
+
 d = {
 'Hendrix' : '1942',
 'Allman' : '1946',

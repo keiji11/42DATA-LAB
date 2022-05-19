@@ -1,5 +1,7 @@
 """
-Write a program that prints the sum of two numbers inserted by the user.
+Write a program that prints the sum of two numbers
+inserted by the user. The program must be able to manage
+exceptions/input errors.
 """
 import sys
 

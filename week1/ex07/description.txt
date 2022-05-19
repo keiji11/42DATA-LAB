@@ -1,0 +1,22 @@
+Create a file called "intern.py". Then create a Intern class
+containing the following functionalities:
+A builder taking a character chain as a parameter, assigning
+its value to a Name attribute. "My name? I’m nobody, an
+intern, I have no name." will be implemented as default
+value.
+A method __str__() that will return Name attribute of the
+instance.
+A Coffee class with a simple __str__() method that will
+return the character chain "This is the worst coffee you ever
+tasted.".
+A work() method that will raise only one exception (use the
+basic (Exception) type)
+with the text "I’m just an intern, I can’t do that...".
+A make_coffee() method that will return an instance of the
+Coffee class that you will have implemented in Intern class.
+In your tests, you will have to instantiate twice the Intern
+class. Once without a name, the second time with the name
+"Mark".
+Display the name of each instance. Ask mark to make you a
+coffee and display the result. Ask the other intern to work.
+You will have to manage the exception in your test.
