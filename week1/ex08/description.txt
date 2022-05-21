@@ -1,33 +1,37 @@
-You will upload two files(machine.py and beverages.py).
-Create the CoffeeMachine class containing:
-• A builder.
-• An EmptyCup class inheriting HotBeverage, with the name
-"empty cup", a 0.90 price and the description "An empty
-cup?! Gimme my money back!".
-Copy the beverages.py file frome the previous exercise in
-this exercise folder to use the classes it contains.
-• A BrokenMachineException class inheriting the Exception
-with the text "This coffee machine has to be repaired.".
-This text must be defined in the exception’s builder.
-• A repair() method that fixes the machine so it can serve
-hot drinks again.
-• A serve() method that will have the following
-specifications:
-Parameters : A unique parameter (other than self) that will
-be a class derived from HotBeverage.
-Return: Alternatively (randomly), the method returns an
-instance of the class set in parameter and alternatively,
-an EmptyCup instance. Obsolescence: The machine is cheap
-and breaks down after serving 10 drinks. When out of order:
-the call for the serve() method must raise a
-CoffeeMachine.BrokenMachitype exception until the repair()
-method is called.
-Fixing: After calling the repair() method, the serve()
-method can work again without raising the exception before
-it breaks down again after serving 10 drinks. In your
-tests, instantiate the CoffeeMachine class. Ask for
-various drinks from the beverages.py file and display the
-drink you’re served until the machine breaks down (you
-will then manage the raised exception). Fix the machine
-and start again until the machine breaks down again
-(manage the exception again).
+Create a file called beverages.py. Inside create a
+HotBeverage class with the following functionalities:
+- A price attribute with the value of 0.30
+- A name attribute with the "hot beverage" value
+- A description() method returning an instance description.
+The description value will be "Just some hot water in a
+cup".
+-A __str__() method returning an instance description in
+this form
+name : <name attribute>
+price : <price attribute limited to two decimal points>
+description : <instance's description>
+for instance, a HotBeverage instance display would look
+like this:
+name : hot beverage
+price : 0.30
+description : Just some hot water in a cup.
+Then create the following derived classes from
+HotBeverage:
+- Coffee:
+name: "coffee"
+price: 0.40
+description: "A coffee, to stay awake."
+- Tea:
+name: "tea"
+price: 0.30
+description: "Just some hot water in a cup."
+- Chocolate:
+name: "chocolate"
+price: 0.50
+description: "Chocolate, sweet chocolate..."
+- Cappuccino:
+name: "cappuccino"
+price: 0.45
+description: "Un po' di Italia nella sua tazza!"
+In your tests, instantiate each class among: HotBeverage,
+Coffee, Tea, Chocolate and Cappuccino and display them.
