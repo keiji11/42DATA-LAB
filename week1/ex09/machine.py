@@ -18,12 +18,13 @@ class CoffeeMachine:
 	def repair(self):
 		self.drinks = 0
 		self.broke = False
+		print("The coffee machine has been repaired.")
 
 	def serve(self, beverage):
-		if self.drinks > 10:
+		if self.drinks >= 10:
 			self.broke = True
 			raise BrokenMachineException()
-		if not self.broke and self.drinks <= 10:
+		if not self.broke:
 			tea = Tea()
 			coffee = Coffee()
 			cappuccino = Cappuccino()
@@ -44,18 +45,17 @@ class CoffeeMachine:
 			elif beverage == "empty cup":
 				return emptyCup
 
-class BrokenMachineException(Exception):
+class BrokenMachineException(Exception, CoffeeMachine):
 	def __init__(self):
-		super().__init__("This coffee machine has to be repaired.")
-	print("Machine is broken...it will repair soon...")
-	time.sleep(3)
-	CoffeeMachine().repair()
-	print("The coffee machine has been repaired.")
+		print("This coffee machine has to be repaired.")
+		print("Machine is broken...it will repair soon...")
+		time.sleep(3)
+		CoffeeMachine.repair(self)
 
 c = CoffeeMachine()
 beveragesList = ["tea", "coffee", "cappuccino", "chocolate", "empty cup"]
 while True:
-	print("What do you want to drink?\n")
+	print("What do you want to drink?")
 	item = random.choice(beveragesList)
 	print(item)
 	print(c.serve(item))
