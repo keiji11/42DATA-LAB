@@ -43,6 +43,7 @@ unique_job_titles = df_salaries4['JobTitle'].nunique()
 
 # 10. What are the top 5 most common jobs?
 top_5_jobs = df_salaries4['JobTitle'].value_counts().head(5)
+prin
 # print(top_5_jobs)
 
 # 11. How many Job Titles were represented by only one person in 2013?(Job Titles with only one occurence in 2013?)
